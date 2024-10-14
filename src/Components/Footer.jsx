@@ -17,15 +17,16 @@ const Footer = () => {
           placeat eaque nesciunt alias beatae id, at dicta.</p>
         <div class="mt-[18px] flex gap-4">
           <a class="hover:scale-110" target="_blank"
-            href="#"><img alt="facebook icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/facebook.svg" /></a><a
+            href="/"><img alt="facebook icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/facebook.svg" /></a><a
             class="hover:scale-110" target="_blank"
             href="/"><img alt="linkdin icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/linkdin.svg" /></a><a
             class="hover:scale-110" target="_blank"
             href="/"><img alt="instagram icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/instagram1.svg" /></a><a
             class="hover:scale-110" target="_blank"
-            href=""><img alt="twitter icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/twitter.svg" /></a><a
+            href="/"><img alt="twitter icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/twitter.svg" /></a>
+            <a
             class="hover:scale-110" target="_blank"
-            href="https://www.youtube.com/"><img alt="youtube icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/youtube.svg" /></a>
+            href="/"><img alt="youtube icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/youtube.svg" /></a>
         </div>
       </div>
       <div class="md:w-[316px]">
@@ -98,9 +99,9 @@ const Footer = () => {
           <p class="text-deutziawhite font-inter text-[18px] font-medium">Download the app</p>
           <div class="flex gap-4 sm:flex-col">
             <a target="_blank"
-              href=""><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/google-store.svg" /></a><a
+              href="/"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/google-store.svg" /></a><a
               target="_blank"
-              href=""><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/apple-store.svg" /></a>
+              href="/"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/apple-store.svg" /></a>
           </div>
         </div>
       </div>

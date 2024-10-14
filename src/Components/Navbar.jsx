@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="bg-gray-300 text-black p-4 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <Link to="/">ISL Translator</Link>
+        <Link to="/" className='text-green-700'>Goonj</Link>
       </div>
 
       {/* Desktop Menu */}
