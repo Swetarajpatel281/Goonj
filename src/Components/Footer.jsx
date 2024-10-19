@@ -1,9 +1,13 @@
 import React from 'react'
-
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaYoutubeSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-     <div class="mt-8 bg-gray-800 pt-9">
+     <div class="bg-gray-800 pt-9">
   <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
     <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
       <div class="md:w-[316px]">
@@ -17,16 +21,16 @@ const Footer = () => {
           placeat eaque nesciunt alias beatae id, at dicta.</p>
         <div class="mt-[18px] flex gap-4">
           <a class="hover:scale-110" target="_blank"
-            href="/"><img alt="facebook icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/facebook.svg" /></a><a
+            href="/"> <FaSquareFacebook  size={30} className='text-white'/></a><a
             class="hover:scale-110" target="_blank"
-            href="/"><img alt="linkdin icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/linkdin.svg" /></a><a
+            href="/"><FaLinkedin  size={30} className='text-white'/></a><a
             class="hover:scale-110" target="_blank"
-            href="/"><img alt="instagram icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/instagram1.svg" /></a><a
+            href="/"><FaInstagramSquare size={30} className='text-white'/></a><a
             class="hover:scale-110" target="_blank"
-            href="/"><img alt="twitter icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1" src="https://www.englishyaari.com/img/twitter.svg" /></a>
+            href="/"><FaSquareXTwitter size={30} className='text-white'/></a>
             <a
             class="hover:scale-110" target="_blank"
-            href="/"><img alt="youtube icon" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/youtube.svg" /></a>
+            href="/"><FaYoutubeSquare size={30} className='text-white'/></a>
         </div>
       </div>
       <div class="md:w-[316px]">
@@ -52,7 +56,7 @@ const Footer = () => {
             </svg>
           </div>
           <div class="ml-[18px]">
-            <a href="mailto:help@lorem.com" class="font-Inter text-[14px] font-medium text-[#fff]">help@lorem.com</a>
+            <a href="mailto:help@lorem.com" class="font-Inter text-[14px] font-medium text-[#fff]">swetapatel@gmail.com</a>
             <p class="font-Inter text-[12px] font-medium text-[#fff]">Support Email</p>
           </div>
         </div>
@@ -65,8 +69,8 @@ const Footer = () => {
             </svg>
           </div>
           <div class="ml-[18px]">
-            <a href="mailto:help@lorem.com" class="font-Inter text-[14px] font-medium text-[#fff]">Sub Nerul, Mumbia,
-              India, 123456</a>
+            <a href="mailto:help@lorem.com" class="font-Inter text-[14px] font-medium text-[#fff]">Vijay Nagar, Indore,
+              India, 452010</a>
             <p class="font-Inter text-[12px] font-medium text-white">Address</p>
           </div>
         </div>
@@ -80,7 +84,7 @@ const Footer = () => {
                 href="/">Home</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
-                href="/our-tutors">News</a></li>
+                href="/our-tutors">About</a></li>
             <li class="mt-[15px]"><a
                 class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
                 href="/become-a-tutor">Contact</a></li>
@@ -99,19 +103,22 @@ const Footer = () => {
           <p class="text-deutziawhite font-inter text-[18px] font-medium">Download the app</p>
           <div class="flex gap-4 sm:flex-col">
             <a target="_blank"
-              href="/"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"src="https://www.englishyaari.com/img/google-store.svg" /></a><a
+              href="/">
+              <FaSquareFacebook  size={30}/></a>
+              <a
               target="_blank"
-              href="/"><img alt="facebook icon" loading="lazy" width="168" height="50" decoding="async" data-nimg="1"  src="https://www.englishyaari.com/img/apple-store.svg" /></a>
+              href="/">
+              <FaLinkedin  size={30}/></a>
           </div>
         </div>
       </div>
     </div>
-    <hr class="mt-[30px] text-white" />
+    <hr class="mt-[15px] text-white" />
     <div class="flex items-center justify-center pb-8 pt-[9px] md:py-8">
-      <p class="text-[10px] font-normal text-white md:text-[12px]">
+      <p class="text-[15px] font-normal text-white md:text-[12px]">
         © Copyright
        2024
-       , All Rights Reserved by YOUR WEBSITES. PVT. LTD
+       , All Rights Reserved by GOONJ. PVT. LTD
       </p>
     </div>
   </div>

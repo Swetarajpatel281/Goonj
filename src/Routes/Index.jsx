@@ -6,6 +6,10 @@ import About from '../Pages/About'
 import Contact from '../Pages/Contact'
 import SignUp from '../Pages/SignUp'
 import LoginPage from '../Pages/Login'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const router = createBrowserRouter([
     {
         path: "/",

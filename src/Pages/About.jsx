@@ -112,10 +112,10 @@ const About = () => {
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
           Empowering Speech Language Therapy with Technology
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl text-white mb-8">
+        <p className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8">
           Streamlining Speech Therapy Services for Better Outcomes
         </p>
 
@@ -124,7 +124,7 @@ const About = () => {
           <a href="#learn-more" className="bg-white text-blue-500 font-semibold py-3 px-6 rounded-lg shadow hover:bg-blue-50 transition duration-300">
             Learn More
           </a>
-          <a href="#platform-features" className="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-white hover:text-blue-500 transition duration-300">
+          <a href="#platform-features" className="bg-transparent border border-white text-gray-600 font-semibold py-3 px-6 rounded-lg shadow hover:bg-white hover:text-blue-500 transition duration-300">
             Explore Platform Features
           </a>
         </div>
@@ -133,7 +133,7 @@ const About = () => {
     
 
     {/* Our vision and mission  */}
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 px-8 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="grid gap-6 md:grid-cols-2">
           
@@ -165,7 +165,7 @@ const About = () => {
  
   {/* Our Objectives  */}
 
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 px-8 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Our Objectives</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

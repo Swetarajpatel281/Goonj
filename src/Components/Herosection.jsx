@@ -1,7 +1,7 @@
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect } from "react";
-// import { FiArrowRight } from "react-icons/fi";
+
 import {
   useMotionTemplate,
   useMotionValue,
@@ -24,7 +24,7 @@ const Herosection = () => {
     });
   }, [color]);
 
-  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #3B4450 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
@@ -36,7 +36,7 @@ const Herosection = () => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-600 px-4 py-24 text-gray-200"
     >
       <div className="relative z-10 flex flex-col items-center">
-        {/* Integrate ShuffleHero component here */}
+      
         <ShuffleHero />
       </div>
 
