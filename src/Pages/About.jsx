@@ -1,6 +1,8 @@
 import {React, useState }from 'react' 
 import { FaLightbulb } from "react-icons/fa";
 import { FaBullseye } from "react-icons/fa6";
+import { FaHandshakeAngle } from "react-icons/fa6";
+import { FaLanguage } from "react-icons/fa6";
 import { FaTabletAlt, FaComments, FaBrain, FaShieldAlt, FaChartLine, FaGlobe } from 'react-icons/fa'; // Import icons
 import { FaRobot } from 'react-icons/fa';
 const objectives = [
@@ -102,7 +104,7 @@ const About = () => {
   return (
     <div>
      {/* Hero section  */}
-    <section className="relative w-full h-screen bg-gradient-to-r from-blue-400 to-green-400">
+    <section className="relative w-full h-screen bg-gradient-to-r from-blue-400 to-green-400 ">
       {/* Background overlay with tech accents */}
       <div className="absolute inset-0 bg-opacity-50 bg-white flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-no-repeat bg-center" 
@@ -140,22 +142,22 @@ const About = () => {
           {/* Vision Card */}
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
             <div className="flex items-center justify-center text-blue-500 mb-4">
-              <FaLightbulb className="w-12 h-12" />
+              <FaHandshakeAngle className="w-12 h-12" />
             </div>
             <h2 className="text-2xl font-semibold text-center mb-4">Our Vision</h2>
             <p className="text-center text-gray-600">
-              More Accessible, Efficient, Personalized Speech Therapy.
+              To create a world where communication is barrier-free, enabling individuals who use Indian Sign Language to interact seamlessly with society, fostering inclusivity and equal opportunities for all.
             </p>
           </div>
           
           {/* Mission Card */}
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
             <div className="flex items-center justify-center text-green-500 mb-4">
-              <FaBullseye className="w-12 h-12" />
+              <FaLanguage className="w-12 h-12" />
             </div>
             <h2 className="text-2xl font-semibold text-center mb-4">Our Mission</h2>
             <p className="text-center text-gray-600">
-              Empower Therapists and Patients with a Seamless Digital Platform.
+              To develop cutting-edge technology that accurately translates Indian Sign Language into text and speech in real-time, empowering the deaf and hard-of-hearing community to communicate effectively in both personal and professional environments.
             </p>
           </div>
 

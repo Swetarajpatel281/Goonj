@@ -1,4 +1,5 @@
  import React from 'react';
+ import logo from '../assests/goonj_logo.png'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleSidebar, closeSidebar } from '../Redux/Store';
@@ -8,18 +9,19 @@ const Navbar = () => {
   const isSidebarOpen = useSelector((state) => state.sidebar.isOpen);
 
   return (
-    <div className="bg-gray-300 text-black p-4 flex justify-between items-center">
+    <div className="bg-gray-600 text-white p-4 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <Link to="/" className='text-green-700'>Goonj</Link>
+        <Link to="/" className='text-green-700'>
+        <img src={logo} alt=""  className=' w-[120px] h-20'/></Link>
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-6">
-        <Link to="/" className="hover:text-gray-800">Home</Link>
-        <Link to="/about" className="hover:text-gray-800">About</Link>
-        <Link to="/contact" className="hover:text-gray-800">Contact</Link>
-        <Link to="/signup" className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200">Sign Up</Link>
+      <div className="hidden md:flex space-x-6 align-middle">
+        <Link to="/" className="hover:text-green-400">Home</Link>
+        <Link to="/about" className="hover:text-gray-100">About</Link>
+        <Link to="/contact" className="hover:text-gray-100">Contact</Link>
+        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200">Sign Up</Link>
       </div>
 
       {/* Mobile Menu Icon */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assests/goonj_logo.png'
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -12,9 +13,8 @@ const Footer = () => {
     <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
       <div class="md:w-[316px]">
         <p class="text-[18px] font-medium text-white">
-        <h1 class="text-white font-extrabold">
-          <span class="text-rose-600">YOUR</span>LOGO
-        </h1>
+       
+         <img src={logo} alt="" />
         </p>
         <p class="mt-[18px] text-[15px] font-normal text-white/[80%]">Lorem ipsum dolor sit amet consectetur adipisicing
           elit. Eos, fugit non. Incidunt dolorum adipisci, tempore asperiores nemo odio facere officiis enim animi

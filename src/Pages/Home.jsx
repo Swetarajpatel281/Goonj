@@ -3,6 +3,7 @@ import HeroSection from '../Components/Herosection';
 import Slider from "react-slick";
 
 
+
 const features = [
   {
     title: 'Real-Time ISL to Text Conversion',
@@ -60,20 +61,20 @@ const steps = [
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Ram krishna",
     role: "Software Engineer",
     feedback: "This platform has completely transformed how I work with my clients. The tools are intuitive and easy to use!",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    name: "Jane Smith",
+    name: "Rasmika Rana",
     role: "Therapist",
     feedback: "Managing patient records and tracking progress has never been easier. Highly recommended!",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    name: "Mark Johnson",
-    role: "Supervisor",
+    name: "Kartik joshi",
+    role: "Family",
     feedback: "The platform’s ability to handle multiple cases and generate reports is a huge time-saver for me.",
     avatar: "https://randomuser.me/api/portraits/men/66.jpg"
   },
