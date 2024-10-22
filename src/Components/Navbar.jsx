@@ -3,13 +3,15 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleSidebar, closeSidebar } from '../Redux/Store';
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const isSidebarOpen = useSelector((state) => state.sidebar.isOpen);
 
   return (
-    <div className="bg-gray-600 text-white p-4 flex justify-between items-center">
+    <div className="bg-[#1e293b] text-white py-2 px-6 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold">
         <Link to="/" className='text-green-700'>
@@ -18,17 +20,15 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6 align-middle">
-        <Link to="/" className="hover:text-green-400">Home</Link>
-        <Link to="/about" className="hover:text-gray-100">About</Link>
-        <Link to="/contact" className="hover:text-gray-100">Contact</Link>
-        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200">Sign Up</Link>
+        <Link to="/" className="hover:text-green-400  font-medium">Home</Link>
+        <Link to="/about" className="hover:text-gray-100 font-medium">About</Link>
+        <Link to="/contact" className="hover:text-gray-100 font-medium">Contact</Link>
+        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200 font-medium">Sign Up</Link>
       </div>
 
       {/* Mobile Menu Icon */}
       <button className="md:hidden focus:outline-none" onClick={() => dispatch(toggleSidebar())}>
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+      <HiOutlineMenuAlt3 size={30}/>
       </button>
 
       {/* Sidebar (Mobile) */}
@@ -36,11 +36,9 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-10">
           <div className="fixed top-0 left-0 w-64 bg-blue-600 h-full z-20">
             <div className="flex justify-between items-center p-4">
-              <span className="text-2xl font-bold">Menu</span>
+             
               <button onClick={() => dispatch(closeSidebar())}>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+              <IoCloseSharp  size={30}/>
               </button>
             </div>
             <nav className="flex flex-col space-y-4 p-4">

@@ -1,6 +1,4 @@
 import {React, useState }from 'react' 
-import { FaLightbulb } from "react-icons/fa";
-import { FaBullseye } from "react-icons/fa6";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import { FaLanguage } from "react-icons/fa6";
 import { FaTabletAlt, FaComments, FaBrain, FaShieldAlt, FaChartLine, FaGlobe } from 'react-icons/fa'; // Import icons
@@ -114,11 +112,11 @@ const About = () => {
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
-          Empowering Speech Language Therapy with Technology
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-700 mb-4">
+          Empowering Speech Language with Technology
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8">
-          Streamlining Speech Therapy Services for Better Outcomes
+          Streamlining Speech Translator Services for Better Outcomes
         </p>
 
         {/* Action Buttons */}
@@ -228,7 +226,7 @@ const About = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for better text visibility */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <h2 className="text-4xl font-bold mb-6">
-          Join us in Revolutionizing Speech Therapy.
+          Join us in Revolutionizing Speech Translator.
         </h2>
         <div className="flex justify-center space-x-4">
           <a

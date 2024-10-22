@@ -9,16 +9,12 @@ const Footer = () => {
   return (
     <div>
      <div class="bg-gray-800 pt-9">
-  <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
+  <div class="mx-auto max-w-[1166px] px-4 xl:px-0">
     <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
       <div class="md:w-[316px]">
-        <p class="text-[18px] font-medium text-white">
-       
          <img src={logo} alt="" />
-        </p>
         <p class="mt-[18px] text-[15px] font-normal text-white/[80%]">Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eos, fugit non. Incidunt dolorum adipisci, tempore asperiores nemo odio facere officiis enim animi
-          placeat eaque nesciunt alias beatae id, at dicta.</p>
+          elit. Eos, fugit non. Incidunt dolorum adipisci.</p>
         <div class="mt-[18px] flex gap-4">
           <a class="hover:scale-110" target="_blank"
             href="/"> <FaSquareFacebook  size={30} className='text-white'/></a><a
