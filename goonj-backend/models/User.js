@@ -15,15 +15,6 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true },
-        Confirmpassword: {
-            type: String,
-            validate: {
-              validator: function(value) {
-                return value === this.password; 
-              },
-              message: 'Passwords do not match!'
-            }
-          },
         isVerified: { 
             type: Boolean,
             default: false },
