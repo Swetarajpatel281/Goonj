@@ -22,8 +22,9 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 align-middle">
         <Link to="/" className="hover:text-green-400  font-medium">Home</Link>
         <Link to="/about" className="hover:text-gray-100 font-medium">About</Link>
+        <Link to="/result" className="hover:text-gray-100 font-medium">Result</Link>
         <Link to="/contact" className="hover:text-gray-100 font-medium">Contact</Link>
-        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200 font-medium">Sign Up</Link>
+        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200 font-medium">signUp</Link>
       </div>
 
       {/* Mobile Menu Icon */}
@@ -45,7 +46,7 @@ const Navbar = () => {
               <Link to="/" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Home</Link>
               <Link to="/about" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>About</Link>
               <Link to="/contact" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Contact</Link>
-              <Link to="/signup" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Sign Up</Link>
+              <Link to="/signup" className="text-white rounded-full hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>signup</Link>
             </nav>
           </div>
         </div>

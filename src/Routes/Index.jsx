@@ -4,11 +4,12 @@ import App from '../App'
 import Home from '../Pages/Home'
 import About from '../Pages/About'
 import Contact from '../Pages/Contact'
-import SignUp from '../Pages/SignUp'
-import LoginPage from '../Pages/Login'
+import Login from '../Components/Login'
+import Result from '../Pages/Result'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SignUp from '../Pages/SignUp'
 
 
 const router = createBrowserRouter([
@@ -29,13 +30,18 @@ const router = createBrowserRouter([
               element : <Contact />
             },
             {
+              path : '/result',
+              element : <Result />
+            },
+            {
               path : '/signup',
               element : <SignUp />
             },
             {
               path : '/login',
-              element : <LoginPage />
-            }
+              element : <Login/>
+            },
+          
         ]
     }
 ])

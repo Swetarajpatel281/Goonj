@@ -4,7 +4,9 @@ import Footer from "./Components/Footer";
 import { Provider } from "react-redux";
 import store from "./Redux/Store"
 
+
 function App() {
+
   return (
   <>
   <Provider store={store}>

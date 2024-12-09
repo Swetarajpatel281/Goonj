@@ -27,7 +27,7 @@ const About = () => {
           <a href="#learn-more" className="bg-white text-blue-500 font-semibold py-3 px-6 rounded-lg shadow hover:bg-blue-50 transition duration-300">
             Learn More
           </a>
-          <a href="#platform-features" className="bg-transparent border border-white text-gray-600 font-semibold py-3 px-6 rounded-lg shadow hover:bg-white hover:text-blue-500 transition duration-300">
+          <a href="/signup" className="bg-transparent border border-white text-gray-600 font-semibold py-3 px-6 rounded-lg shadow hover:bg-white hover:text-blue-500 transition duration-300">
             Explore Platform Features
           </a>
         </div>

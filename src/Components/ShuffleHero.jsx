@@ -14,7 +14,7 @@ const ShuffleHero = () => {
   return (
     <section className="w-full px-4 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl">
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
+        <span className="block mb-4 text-xs md:text-sm text-indigo-300 font-medium">
         Unlock Your Potential with Every Step
         </span>
         <h3 className="text-3xl md:text-5xl font-semibold">
@@ -23,9 +23,9 @@ const ShuffleHero = () => {
         <p className="text-base md:text-lg text-slate-100 my-4 md:my-6">
         "Whether you're seeking to enhance your skills or embrace a healthier lifestyle, our classes are designed for every aspiration. Experience expert guidance, a supportive community, and the tools you need to succeed. The only limit is your imagination—let's make it happen together!"
         </p>
-        <button className="bg-gray-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-green-700 active:scale-95">
+        <a href="/signup" className="bg-gray-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-green-700 active:scale-95">
         Start Your Journey Today
-        </button>
+        </a>
       </div>
       <ShuffleGrid />
     </section>

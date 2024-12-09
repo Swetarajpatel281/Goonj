@@ -16,16 +16,22 @@ const Contact = () => {
     <path fill="url(#grayToGreen)" fillOpacity="1" d="M0,0L80,0C160,0,320,0,480,32C640,64,800,128,960,170.7C1120,213,1280,235,1360,245.3L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
 </div>
-<div className='flex justify-between'>
-  <h1 className="text-9xl font-bold top-[40px] transform " style={{ color: '#083344' }}>
+<div className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-12">
+  <h1
+    className="text-8xl md:text-6xl lg:text-9xl font-bold mt-4 lg:mt-0 text-center lg:text-left transform"
+    style={{ color: '#083344' }}
+  >
     Contact Us
   </h1>
-  <div className="right-0  p-12 w-[500px] top-[40px]">
+  <div className="mt-8 lg:mt-0 p-4 sm:p-8 lg:p-12 w-full lg:w-[500px]">
     <ContactForm />
   </div>
-  </div>
+</div>
 <div class="py-4 bg-white">
     <div class="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+
+
+{/* FAQ  */}
 
         <div class="text-center">
             <p class="mt-4 text-sm leading-7 text-gray-500 font-regular">
@@ -58,16 +64,14 @@ const Contact = () => {
                             </svg>
                         </div>
                         <div class="bg-gray-100 p-5 px-10 w-full flex items-center">
-                            <h4 class="text-md leading-6 font-medium text-gray-900">What could possibly be your first
-                                question?</h4>
+                            <h4 class="text-md leading-6 font-medium text-gray-900">What is the primary goal of the "Indian Sign Language to Text/Speech Translation" system?
+                            </h4>
                         </div>
                     </div>
 
                     <div class="flex flex-row items-start">
                         <div class="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                            <p class="text-gray-700 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            <p class="text-gray-700 text-sm">To translate gestures in Indian Sign Language into readable text or audible speech for effective communication between ISL users and non-signing individuals.
                             </p>
                         </div>
                         <div
@@ -125,16 +129,15 @@ const Contact = () => {
                             </svg>
                         </div>
                         <div class="bg-gray-100 p-5 px-10 w-full flex items-center">
-                            <h4 class="text-md leading-6 font-medium text-gray-900">What could possibly be your first
-                                question?</h4>
+                            <h4 class="text-md leading-6 font-medium text-gray-900">
+Which key feature points are extracted during the sign detection process?
+</h4>
                         </div>
                     </div>
 
                     <div class="flex flex-row items-start">
                         <div class="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                            <p class="text-gray-700 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            <p class="text-gray-700 text-sm">Fingertips, palm center, and wrist.
                             </p>
                         </div>
                         <div
@@ -192,16 +195,14 @@ const Contact = () => {
                             </svg>
                         </div>
                         <div class="bg-gray-100 p-5 px-10 w-full flex items-center">
-                            <h4 class="text-md leading-6 font-medium text-gray-900">What could possibly be your first
-                                question?</h4>
+                            <h4 class="text-md leading-6 font-medium text-gray-900">How does the system differentiate between similar gestures in Indian Sign Language?
+                            </h4>
                         </div>
                     </div>
 
                     <div class="flex flex-row items-start">
                         <div class="bg-indigo-100 p-5 px-10 w-full flex items-center">
-                            <p class="text-gray-700 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            <p class="text-gray-700 text-sm">By analyzing feature points, relative heights, and angles of the hand and fingers.
                             </p>
                         </div>
                         <div

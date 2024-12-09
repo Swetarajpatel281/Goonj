@@ -1,10 +1,11 @@
-
-import React from 'react'
-
+import React from "react";
+import App from "../Components/face-detection/App";
 const Result = () => {
   return (
-    <div>
-      
+  
+    <div className="App">
+      <App />
+
     </div>
   )
 }

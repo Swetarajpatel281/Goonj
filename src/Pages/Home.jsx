@@ -1,7 +1,9 @@
 import React from 'react'
 import HeroSection from '../Components/Herosection';
 import Slider from "react-slick";
-
+import d1 from '../assests/d1.jpg';
+import d2 from '../assests/d2.jpg';
+import d3 from '../assests/d3.jpg';
 
 
 const features = [
@@ -64,19 +66,19 @@ const testimonials = [
     name: "Ram krishna",
     role: "Software Engineer",
     feedback: "This platform has completely transformed how I work with my clients. The tools are intuitive and easy to use!",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    avatar: d1
   },
   {
-    name: "Rasmika Rana",
+    name:"kumar Rana",
     role: "Therapist",
     feedback: "Managing patient records and tracking progress has never been easier. Highly recommended!",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    avatar: d2
   },
   {
     name: "Kartik joshi",
     role: "Family",
     feedback: "The platform’s ability to handle multiple cases and generate reports is a huge time-saver for me.",
-    avatar: "https://randomuser.me/api/portraits/men/66.jpg"
+    avatar: d3
   },
 ];
 
