@@ -10,15 +10,7 @@ import victory from "../face-detection/public/victory.jpg";
 import thumbs_up from "../face-detection/public/thumb_up.jpg";
 import hello from "../face-detection/public/hello.png";
 import ok from "../face-detection/public/ok.webp";
-// import  A from "../face-detection/public/A/0.jpg"
-// import B from "../face-detection/public/B/0.jpg"
-// import C from "../face-detection/public/C/0.jpg"
-// import D from "../face-detection/public/D/0.jpg"
-// import E from "../face-detection/public/E/0.jpg"
-// import F from "../face-detection/public/F/0.jpg"
-// import letterG from "../face-detection/public/B/0.jpg"
-import {helloGesture, okGesture} from './GestureDescription.jsx'
-// , letterA, letterB, letterC, letterD, letterE
+import { helloGesture, okGesture } from './GestureDescription.jsx';
 
 function App() {
   const webcamRef = useRef(null);
@@ -26,13 +18,10 @@ function App() {
 
   const [emoji, setEmoji] = useState(null);
   const [currentGesture, setCurrentGesture] = useState(null);
+  const [isWebcamActive, setIsWebcamActive] = useState(true); 
 
   // Add new images for gestures
-  const images = { 
-    thumbs_up, victory, 
-    hello, ok,
-    // A,B,C,D,E,F,
-  };
+  const images = { thumbs_up, victory, hello, ok };
 
   const runHandpose = async () => {
     await tf.setBackend("webgl");
@@ -62,14 +51,8 @@ function App() {
         const GE = new fp.GestureEstimator([
           fp.Gestures.VictoryGesture,
           fp.Gestures.ThumbsUpGesture,
-          helloGesture, 
+          helloGesture,
           okGesture,
-          // letterA,
-          // letterB,
-          // letterC,
-          // letterD,
-          // letterE
-         
         ]);
 
         const gesture = await GE.estimate(hand[0].landmarks, 4);
@@ -79,8 +62,8 @@ function App() {
             (prev, curr) => (prev.confidence > curr.confidence ? prev : curr)
           );
 
-          setEmoji(maxConfidence.name); 
-          setCurrentGesture(maxConfidence.name); 
+          setEmoji(maxConfidence.name);
+          setCurrentGesture(maxConfidence.name);
         }
       }
 
@@ -90,33 +73,45 @@ function App() {
     requestAnimationFrame(() => detect(net));
   };
 
+  const handleStopWebcam = () => {
+    setIsWebcamActive(false);
+  };
+
+  const handleStartWebcam = () => {
+    setIsWebcamActive(true);
+  };
+
   useEffect(() => {
-    runHandpose();
-  }, []);
+    if (isWebcamActive) {
+      runHandpose();
+    }
+  }, [isWebcamActive]);
 
   useEffect(() => {
     if (currentGesture) {
-      console.log(`User is showing: ${currentGesture}`); 
+      console.log(`User is showing: ${currentGesture}`);
     }
   }, [currentGesture]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zIndex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
+        {isWebcamActive && (
+          <Webcam
+            ref={webcamRef}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zIndex: 9,
+              width: 640,
+              height: 400,
+            }}
+          />
+        )}
 
         <canvas
           ref={canvasRef}
@@ -129,7 +124,7 @@ function App() {
             textAlign: "center",
             zIndex: 9,
             width: 640,
-            height: 480,
+            height: 400,
           }}
         />
 
@@ -164,6 +159,22 @@ function App() {
             Current Gesture: {currentGesture}
           </p>
         )}
+{/* Buttons for controlling the webcam */}
+<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+  <button
+    onClick={handleStopWebcam}
+    className="px-2 py-2 m-2  bg-red-600 text-white rounded-lg hover:bg-red-700"
+  >
+    Stop 
+  </button>
+  <button
+    onClick={handleStartWebcam}
+    className="px-2 py-2 m-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+  >
+   Generate Text
+  </button>
+</div>
+
       </header>
     </div>
   );

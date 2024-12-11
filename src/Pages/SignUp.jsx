@@ -41,7 +41,7 @@ const SignUp = () => {
             const response = await signupUser(formData);
             console.log("User signed up:", response);
             alert("Sign up successful!");
-            navigate("/login");
+            navigate("/result");
         } catch (error) {
             console.error("Signup failed:", error);
             setError("Sign up failed. Please try again.");

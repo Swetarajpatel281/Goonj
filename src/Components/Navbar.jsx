@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="/about" className="hover:text-gray-100 font-medium">About</Link>
         <Link to="/result" className="hover:text-gray-100 font-medium">Result</Link>
         <Link to="/contact" className="hover:text-gray-100 font-medium">Contact</Link>
-        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200 font-medium">signUp</Link>
+        <Link to="/signup" className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-gray-200 font-medium">SignUp</Link>
       </div>
 
       {/* Mobile Menu Icon */}
@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Sidebar (Mobile) */}
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-10">
-          <div className="fixed top-0 left-0 w-64 bg-blue-600 h-full z-20">
+          <div className="fixed top-0 right-0 w-64 h-full z-20">
             <div className="flex justify-between items-center p-4">
              
               <button onClick={() => dispatch(closeSidebar())}>
@@ -46,7 +46,7 @@ const Navbar = () => {
               <Link to="/" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Home</Link>
               <Link to="/about" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>About</Link>
               <Link to="/contact" className="text-white hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Contact</Link>
-              <Link to="/signup" className="text-white rounded-full hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>signup</Link>
+              <Link to="/signup" className="text-white rounded-full hover:text-gray-800" onClick={() => dispatch(closeSidebar())}>Signup</Link>
             </nav>
           </div>
         </div>

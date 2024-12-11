@@ -1,33 +1,39 @@
-const express = require('express')
-const cors = require('cors')
-const connectDB = require('./config/db')
-const router = require('./routes/Index')
-require('dotenv').config()
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/db');
+const router = require('./routes/Index');
+const cookieParser = require('cookie-parser')
+require('dotenv').config();
 
-const verifyController = require('./controllers/verifyEmailController')
-const app = express()
-app.use(cors())
-app.use(express.json())
-app.use("/api",router)
+const app = express();
 
-app.get('/', (req,res)=>{
-    res.send('server is ready');
+app.use(cors({
+  origin : process.env.FRONTEND_URL,
+    credentials : true
+}
+
+));
+app.use(express.json());
+app.use(cookieParser())
+
+
+
+app.use("/api", router);
+
+
+app.get('/', (req, res) => {
+  res.send('Server is ready');
 });
 
+
 app.post('/api/signup', (req, res) => {
-    // Handle signup logic
     res.send({ message: 'User signed up successfully' });
 });
 
-app.post("/send-verification-email", verifyController.sendVerificationEmail);
-app.get("/verify-email", verifyController.verifyEmail);
+const PORT = process.env.PORT || 8000;
 
-const PORT = process.env.PORT || 8000 
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+  console.log('Connected to DB');
+});
 
-connectDB().then(()=>{
-    app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-     console.log('connected to db');
-     
-})
-
-    

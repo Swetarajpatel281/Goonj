@@ -20,22 +20,3 @@ export const signupUser = async (userData) => {
 };
 
 
-// Login function
-// export const loginUser = async (credentials) => {
-//     try {
-//         const response = await axios.post(`${BACKEND_URL}/login`, credentials, {
-//             headers: { 'Content-Type': 'application/json' }
-//         });
-        
-//         if (response.status === 200) {
-//             // Optionally, handle successful login response, such as storing tokens
-//             console.log('Login successful:', response.data);
-//             return response.data;
-//         }
-
-//         throw new Error('Login failed, please try again');
-//     } catch (error) {
-//         console.error('Error during login:', error.response?.data || error.message);
-//         throw new Error(error.response?.data?.message || 'Login failed');
-//     }
-// };
