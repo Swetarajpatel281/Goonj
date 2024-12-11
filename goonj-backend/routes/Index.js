@@ -11,5 +11,6 @@ const router = express.Router();
 router.post('/signup', authController.signup);
 router.post('/login',Login)
 router.get("/user-details",authToken,userDetailsController)
+router.post('/verify-email',authController.verifyEmail);
 
 module.exports = router;

@@ -10,7 +10,9 @@ import Result from '../Pages/Result'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SignUp from '../Pages/SignUp'
+import EmailVerificationPage from '../Pages/EmailVerificationPage'
 
+import {Toaster} from 'react-hot-toast'
 
 const router = createBrowserRouter([
     {
@@ -41,7 +43,10 @@ const router = createBrowserRouter([
               path : '/login',
               element : <Login/>
             },
-          
+            {
+              path : '/emailpage',
+              element : <EmailVerificationPage/>
+            },
         ]
     }
 ])
@@ -50,6 +55,7 @@ const Index = () => {
   return (
     <div>
       <RouterProvider router={router}/>
+      <Toaster/>
     </div>
   )
 }

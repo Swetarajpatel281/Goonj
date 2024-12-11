@@ -16,10 +16,6 @@ const SignUp = () => {
     // const [isVerificationSent, setIsVerificationSent] = useState(false);
     const [error, setError] = useState("");
 
-    // useEffect(() => {
-    //     verifyEmail();
-    // }, []);
-
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
@@ -32,48 +28,16 @@ const SignUp = () => {
             return;
         }
 
-        // if (!emailVerified) {
-        //     setError("Please verify your email first.");
-        //     return;
-        // }
-
         try {
             const response = await signupUser(formData);
             console.log("User signed up:", response);
             alert("Sign up successful!");
-            navigate("/result");
+            navigate("/emailpage");
         } catch (error) {
             console.error("Signup failed:", error);
             setError("Sign up failed. Please try again.");
         }
     };
-
-    // const handleSendVerification = async () => {
-    //     try {
-    //         await axios.post("http://localhost:8000/send-verification-email", { email: formData.email });
-    //         alert("Verification email sent! Please check your inbox.");
-    //         setIsVerificationSent(true);
-    //     } catch (error) {
-    //         setError("Failed to send verification email.");
-    //     }
-    // };
-
-    // const verifyEmail = async () => {
-    //     try {
-    //         const params = new URLSearchParams(window.location.search);
-    //         const token = params.get("token");
-
-    //         if (token) {
-    //             const response = await axios.get(`http://localhost:8000/verify-email?token=${token}`);
-    //             alert(response.data.message);
-    //             setEmailVerified(true);
-    //             setIsVerificationSent(false);
-    //             navigate("/signup");
-    //         }
-    //     } catch (error) {
-    //         setError("Email verification failed.");
-    //     }
-    // };
 
     return (
         <div className="bg-gradient-to-b from-white to-green-700 min-h-screen flex items-center justify-center bg-gray-100">
@@ -122,14 +86,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <button
-                                type="button"
-                                // onClick={handleSendVerification}
-                                className="mt-2 px-3 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
-                                // disabled={isVerificationSent}
-                            >
-                                {/* {isVerificationSent ? "Verification Sent" : "Send Verification Email"} */}
-                            </button>
+                           
                         </div>
                         <div className="mb-4 md:flex md:justify-between">
                             <div className="mb-4 md:mr-2 md:mb-0">
@@ -165,9 +122,6 @@ const SignUp = () => {
                             <button
                                 type="submit"
                                 className='w-full px-4 py-2 font-bold text-white rounded-full bg-green-600'
-                                // className={`w-full px-4 py-2 font-bold text-white rounded-full 
-                                //    ${emailVerified ? "bg-green-500" : "bg-gray-400 cursor-not-allowed"}`}
-                                // disabled={!emailVerified}
                             >
                                 Sign Up
                             </button>
