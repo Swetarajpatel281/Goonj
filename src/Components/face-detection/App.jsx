@@ -10,8 +10,9 @@ import victory from "../face-detection/public/victory.jpg";
 import thumbs_up from "../face-detection/public/thumb_up.jpg";
 import hello from "../face-detection/public/hello.png";
 import ok from "../face-detection/public/ok.webp";
-import { helloGesture, okGesture } from './GestureDescription.jsx';
-
+import letterAImage from "../face-detection/public/A.jpeg"; 
+import { helloGesture, okGesture,victoryGesture } from './GestureDescription.jsx';
+import { letterA } from './GestureDescription.jsx';
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -21,7 +22,7 @@ function App() {
   const [isWebcamActive, setIsWebcamActive] = useState(true); 
 
   // Add new images for gestures
-  const images = { thumbs_up, victory, hello, ok };
+  const images = { thumbs_up, victory, hello, ok,A: letterAImage  };
 
   const runHandpose = async () => {
     await tf.setBackend("webgl");
@@ -39,39 +40,47 @@ function App() {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-
+  
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
-
+  
       const hand = await net.estimateHands(video);
-
+  
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
-          fp.Gestures.VictoryGesture,
+          victoryGesture,
           fp.Gestures.ThumbsUpGesture,
           helloGesture,
           okGesture,
+          letterA,
         ]);
-
-        const gesture = await GE.estimate(hand[0].landmarks, 4);
-
+  
+        const gesture = await GE.estimate(hand[0].landmarks, 6.5); // Set higher confidence threshold
         if (gesture.gestures && gesture.gestures.length > 0) {
-          const maxConfidence = gesture.gestures.reduce(
-            (prev, curr) => (prev.confidence > curr.confidence ? prev : curr)
+          // Find the gesture with the highest confidence score
+          const maxConfidenceGesture = gesture.gestures.reduce(
+            (prev, curr) => (prev.score > curr.score ? prev : curr)
           );
-
-          setEmoji(maxConfidence.name);
-          setCurrentGesture(maxConfidence.name);
+  
+          // Apply a confidence threshold for stability
+          if (maxConfidenceGesture.score > 7.5) {
+            setEmoji(maxConfidenceGesture.name);
+            setCurrentGesture(maxConfidenceGesture.name);
+          } else {
+            setEmoji(null); // Reset if no gesture is above threshold
+          }
         }
       }
-
+  
       const ctx = canvasRef.current.getContext("2d");
       drawHand(hand, ctx);
     }
     requestAnimationFrame(() => detect(net));
   };
+  
+  
 
   const handleStopWebcam = () => {
     setIsWebcamActive(false);

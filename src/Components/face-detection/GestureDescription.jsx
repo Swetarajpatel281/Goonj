@@ -1,6 +1,23 @@
 import { GestureDescription, Finger, FingerCurl } from "fingerpose";
 import * as fp from "fingerpose";
 
+//victory
+// Define the Victory gesture
+const victoryGesture = new GestureDescription("victory");
+
+// Index and middle fingers extended
+victoryGesture.addCurl(Finger.Index, FingerCurl.NoCurl, 1.0);
+victoryGesture.addCurl(Finger.Middle, FingerCurl.NoCurl, 1.0);
+
+// Other fingers curled
+victoryGesture.addCurl(Finger.Ring, FingerCurl.FullCurl, 1.0);
+victoryGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1.0);
+
+// Thumb can vary between half-curl and no-curl
+victoryGesture.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+victoryGesture.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
+
+
 // Hello Gesture
 const helloGesture = new fp.GestureDescription("hello");
 helloGesture.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
@@ -23,6 +40,7 @@ byeGesture.addCurl(Finger.Ring, FingerCurl.FullCurl, 1.0);
 byeGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1.0);
 
 // Letter A: Fist with thumb on the side
+
 const letterA = new fp.GestureDescription("A");
 letterA.addCurl(fp.Finger.Thumb, fp.FingerCurl.NoCurl, 1.0);
 letterA.addCurl(fp.Finger.Index, fp.FingerCurl.FullCurl, 1.0);
@@ -67,4 +85,4 @@ for (let finger of [fp.Finger.Index, fp.Finger.Middle, fp.Finger.Ring, fp.Finger
 
 // }
 
-export { helloGesture, okGesture, byeGesture, letterA, letterB, letterC,letterD,letterE }
+export { helloGesture,victoryGesture, okGesture, byeGesture, letterA, letterB, letterC,letterD,letterE }
